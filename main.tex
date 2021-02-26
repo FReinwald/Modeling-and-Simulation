@@ -239,7 +239,7 @@ Auch dieser Aspekt lässt sich für beliebige Seiten in ein Python Programm impl
 Ein Python Programm welches die beiden Verfahren vergleicht ist entweder diesem Dokument beigelegt oder ist ansonsten auf \href{https://github.com/FReinwald/Heat-transfer-with-alternative-difference-star}{Github} zu finden.
 
 \section{Vergleich der Differenzensterne}
-Eine Betrachtung der erzeugten Plots zeigt, dass auch der gedrehte Differenzenstern eine numerische Lösung möglich macht. Auf den ersten Blick erscheinen die Ergebnisse auch sehr ähnlich wie in \ref{fig:compare} zu sehen. Da stellt sich jetzt die Frage warum man in Literatur oder Anwendungen nicht zu Gesicht bekommt. Dafür gibt es verschiedene plausible Gründe.
+Eine Betrachtung der erzeugten Plots zeigt, dass auch der gedrehte Differenzenstern eine numerische Lösung möglich macht. Auf den ersten Blick erscheinen die Ergebnisse auch sehr ähnlich wie in Abbildung \ref{fig:compare} zu sehen. Da stellt sich jetzt die Frage warum man in Literatur oder Anwendungen nicht zu Gesicht bekommt. Dafür gibt es verschiedene plausible Gründe.
 \begin{figure}[h]
         \centering
         \includegraphics[width=\textwidth]{bilder/convalt.jpg}
@@ -253,7 +253,7 @@ Vermutlich eines der besten Argumente gegen den X-Stern ist, dass er nicht intui
 Wie im Python Skript zu sehen braucht der X-Stern zwar weniger Rechenschritte als der +-Stern, für diese aber so viel länger, dass er insgesamt langsamer ist. Bei numerischen Lösungen ist die recheneffizienz sehr wichtig wenn die Modelle größer und genauer werden.
 
 \subsection{Modellperformance}
-Im Vergleich zum +-Stern sieht in Abbildung \ref{fig:relative} man beim X-Stern Abweichungen von bis zu 25(\%), gerade bei starken Temperaturänderungen. Natürlich könnte man nun im Detail analysieren welches der beiden Modelle genauer ist und näher an die Realität herankommt - allerdings lässt sich dies auch logisch erklären ohne die exakte Lösung zu kennen. Denn gerade zwei Aspekte müssen den X-Stern an sich automatisch zum schlechteren Modell als den konventionellen Differenzenstern machen.\\
+Im Vergleich zum +-Stern sieht in Abbildung \ref{fig:relative} man beim X-Stern Abweichungen von bis zu 25\%, gerade bei starken Temperaturänderungen. Natürlich könnte man nun im Detail analysieren welches der beiden Modelle genauer ist und näher an die Realität herankommt - allerdings lässt sich dies auch logisch erklären ohne die exakte Lösung zu kennen. Denn gerade zwei Aspekte müssen den X-Stern an sich automatisch zum schlechteren Modell als den konventionellen Differenzenstern machen.\\
 \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{bilder/rel diff 2.png}
@@ -261,9 +261,9 @@ Im Vergleich zum +-Stern sieht in Abbildung \ref{fig:relative} man beim X-Stern 
         \label{fig:relative}
     \end{figure}
 \subsubsection{Abstand der Nachbarpunkte}
-Bei unserem X-förmigen Stern sind die benachbarten Punkte, welche wir zur Berechnung verwenden um ca. 40(\%) weiter vom Zentrum entfernt. Dies ist der Geometrie des Gitters geschuldet. Bei einem Abstand von 1 der Punkte, so ist der Abstand beim +-Stern weiterhin 1, aber beim X-Stern verwenden wir Punkte mit einem Abstand von $\sqrt{2}$.
+Bei unserem X-förmigen Stern sind die benachbarten Punkte, welche wir zur Berechnung verwenden um ca. 40\% weiter vom Zentrum entfernt. Dies ist der Geometrie des Gitters geschuldet. Bei einem Abstand von 1 der Punkte, so ist der Abstand beim +-Stern weiterhin 1, aber beim X-Stern verwenden wir Punkte mit einem Abstand von $\sqrt{2}$.
 \subsubsection{Ecken des Felds}
-Um einen Wert in der Ecke des Feldes berechnen zu können, so befinden sich beim +-Stern zwei der vier Punkte auserhalb des Feldes, was noch durch Verdoppelung der restlichen zwei Punkte ausgeglichen werden kann.\\
+Um einen Wert in der Ecke des Feldes berechnen zu können, so befinden sich beim +-Stern zwei der vier Punkte außerhalb des Feldes, was noch durch Verdoppelung der restlichen zwei Punkte ausgeglichen werden kann.\\
 Bei unserem X-Stern befinden sich stattdessen drei der vier Punkte außerhalb, was nicht ausgeglichen werden kann. Somit muss die Performance dieser Randwerte als schlecht angesehen werden, was sich auch auf das restliche Feld auswirkt.
 \subsection{Fazit}
 Zusammengefasst lässt sich sagen, dass ein gedrehter Differenzenstern zwar ein akzeptables Ergebnis liefert, die herkömmliche Methode aber zu bevorzugen ist und zu Recht deutlich populärer ist.
